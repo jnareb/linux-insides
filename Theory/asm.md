@@ -64,7 +64,7 @@ Let's start to consider this in order. The first optional `qualifier` is `volati
 ```C
 static inline void native_load_gdt(const struct desc_ptr *dtr)
 {
-	asm volatile("lgdt %0"::"m" (*dtr));
+	__asm__ volatile("lgdt %0"::"m" (*dtr));
 }
 ```
 
